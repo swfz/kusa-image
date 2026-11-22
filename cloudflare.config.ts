@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => ({
     name: 'kusa-image',
     compatibilityDate: '2026-11-13',
     entrypoint,
+    domains: ['kusa-image.swfz.dev'],
     observability: { enabled: true },
     // Daily cleanup of access logs older than the retention period.
     triggers: [triggers.scheduled({ schedule: '0 3 * * *' })],
@@ -20,7 +21,7 @@ export default defineConfig(({ mode }) => ({
       // Personal access token (read-only) used for the GitHub GraphQL API.
       GITHUB_TOKEN: bindings.secret(),
       // Access logs (see migrations/).
-      DB: bindings.d1({ name: 'kusa-image' }),
+      DB: bindings.d1({ name: 'kusa-image', id: '48ce2184-0677-4d39-bfe7-163faf533a4b' }),
     },
   },
 }));

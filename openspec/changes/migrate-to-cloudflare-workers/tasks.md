@@ -75,8 +75,8 @@ GitHub App の検証（App の作成、PAT との取得結果の比較、Worker 
 
 ## 13. 本実装: デプロイと運用
 
-- [ ] 13.1 `kusa-image.swfz.dev` にデプロイする（D1 の作成とマイグレーション、PAT の Secret、`observability` を有効にする）。本番の URL で次を確認する: 1 年分・ダーク・`past_years=19`・存在しないユーザー・`robots.txt` の応答、2 回目のリクエストでキャッシュが HIT すること、D1 にログが入ること。作成した D1 の ID を `cloudflare.config.ts` に書き、VRT の webServer の起動前に `cf d1 migrations apply <id> --local` を流して、VRT でログの書き込みエラーが出ないことも確認する
-- [ ] 13.2 README（使い方・パラメータ・開発・デプロイ・監視）を書く。監視の手順には、Workers Observability で `exceededCpu` と `rate_limited` を確認する `cf o11y telemetry query` のコマンドを含める。README の手順どおりにコマンドが動くことを確認する
+- [x] 13.1 `kusa-image.swfz.dev` にデプロイする（D1 の作成とマイグレーション、PAT の Secret、`observability` を有効にする）。本番の URL で次を確認する: 1 年分・ダーク・`past_years=19`・存在しないユーザー・`robots.txt` の応答、2 回目のリクエストでキャッシュが HIT すること、D1 にログが入ること。作成した D1 の ID を `cloudflare.config.ts` に書き、VRT の webServer の起動前に `cf d1 migrations apply <id> --local` を流して、VRT でログの書き込みエラーが出ないことも確認する
+- [x] 13.2 README（使い方・パラメータ・開発・デプロイ・監視）を書く。監視の手順には、Workers Observability で `exceededCpu` と `rate_limited` を確認する `cf o11y telemetry query` のコマンドを含める。README の手順どおりにコマンドが動くことを確認する
 
 ## 14. BigQuery への取り込み（swfz/cloudflare-import-dataform、新規・プライベート）
 

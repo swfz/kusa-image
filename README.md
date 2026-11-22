@@ -62,13 +62,17 @@ VRT snapshots are generated on Linux to match CI. Regenerate them with Docker (c
 pnpm deploy
 ```
 
-First deploy only: secrets cannot be set before the Worker exists, so pass them as a file, then apply the D1 migrations.
+Production runs at `https://kusa-image.swfz.dev` (custom domain in `cloudflare.config.ts`).
+
+First deploy only: secrets cannot be set before the Worker exists, so pass them as a file. The deploy creates the D1 database if it does not exist; put its ID in `cloudflare.config.ts` (`pnpm exec cf d1 list`) and apply the migrations.
 
 ```sh
-echo "GITHUB_TOKEN=<read-only PAT>" > .dev.vars.secrets
+echo "GITHUB_TOKEN=<read-only PAT>" > .dev.vars.secrets   # fine-grained PAT, public repositories, no permissions
 pnpm exec cf deploy --secrets-file .dev.vars.secrets
-pnpm exec cf d1 migrations apply <D1 database id>   # id: pnpm exec cf d1 list
+pnpm exec cf d1 migrations apply <D1 database id>
 ```
+
+New migrations: `pnpm exec cf d1 migrations apply <D1 database id>` (add `--local` for `cf dev`; VRT does this before starting the Worker).
 
 Later secret updates: `pnpm exec cf workers secrets update --worker kusa-image --type secret_text`.
 
@@ -94,4 +98,12 @@ pnpm exec cf o11y telemetry query --body '{"queryId":"exceeded-cpu","view":"even
 
 If it shows up regularly, move the Worker to the Workers Paid plan (no code change needed).
 
-GitHub API usage shares the rate limit of the PAT owner. The access log records `github_cost` / `github_remaining` per request; `error = 'rate_limited'` (HTTP 503) means the limit was hit.
+GitHub API usage shares the rate limit of the PAT owner. The access log records `github_cost` / `github_remaining` per request; `error = 'rate_limited'` (HTTP 503) means the limit was hit:
+
+```sh
+# rate-limited requests and GitHub API cost per day (last 7 days)
+pnpm exec cf d1 query <D1 database id> --sql "SELECT date(ts, 'unixepoch') AS day,
+  SUM(json_extract(value, '$.error') = 'rate_limited') AS rate_limited,
+  SUM(json_extract(value, '$.github_cost')) AS cost, MIN(json_extract(value, '$.github_remaining')) AS min_remaining
+  FROM logs WHERE ts > unixepoch() - 7 * 86400 GROUP BY day ORDER BY day"
+```
