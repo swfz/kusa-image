@@ -80,8 +80,8 @@ GitHub App の検証（App の作成、PAT との取得結果の比較、Worker 
 
 ## 14. BigQuery への取り込み（swfz/cloudflare-import-dataform、新規・プライベート）
 
-- [ ] 14.1 プライベートリポジトリ `swfz/cloudflare-import-dataform` を作り、BigQuery のテーブル `kusa_image.cf_logs`（`id:STRING, ts:TIMESTAMP, value:JSON`）と、GCS・Workload Identity・Secret（Cloudflare の D1 読み取りトークンなど）を用意する。11.3 のエクスポートで D1 → GCS → BigQuery に取り込むワークフローを作り、`workflow_dispatch` で実行して新しいレコードが `kusa_image.cf_logs` に入ることを確認する
-- [ ] 14.2 Dataform のビューを作る（既存の `kusa_image_logs` と同じ列に加え、ステータス・エラーの種類・キャッシュ・描画時間・PNG サイズ・`cost`/残量・国/colo/ASN）。新しいレコードで各列が埋まることをクエリで確認する
+- [x] 14.1 プライベートリポジトリ `swfz/cloudflare-import-dataform` を作り、BigQuery のテーブル `kusa_image.cf_logs`（`id:STRING, ts:TIMESTAMP, value:JSON`）と、GCS・Workload Identity・Secret（Cloudflare の D1 読み取りトークンなど）を用意する。11.3 のエクスポートで D1 → GCS → BigQuery に取り込むワークフローを作り、`workflow_dispatch` で実行して新しいレコードが `kusa_image.cf_logs` に入ることを確認する
+- [x] 14.2 Dataform のビューを作る（既存の `kusa_image_logs` と同じ列に加え、ステータス・エラーの種類・キャッシュ・描画時間・PNG サイズ・`cost`/残量・国/colo/ASN）。新しいレコードで各列が埋まることをクエリで確認する
 
 ## 15. 旧サービスの移行（swfz/deno-kusa-image）
 
