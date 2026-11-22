@@ -41,7 +41,7 @@ GitHub App の検証（App の作成、PAT との取得結果の比較、Worker 
 
 - [x] 6.1 リポジトリ直下に Workers プロジェクトを作る（`cf init` 相当の構成に、`package.json` の `"type": "module"`、`tsconfig.json` の `strict: true` を加える）。`pnpm-workspace.yaml` に `minimumReleaseAge: 10080` と `allowBuilds` を書き、`cf`・vite・vitest・Playwright を exact で固定する。`pnpm install` の後に、入ったパッケージがすべて公開から 7 日以上経っていることを registry の公開時刻で確認する
 - [x] 6.2 Prettier（`singleQuote`・`trailingComma: all`・`printWidth: 120`）、oxlint（typescript-eslint が TS 7 に未対応のため ESLint から変更）、型チェックのスクリプト（`format:check`・`lint`・`typecheck`・`test`・`test:vrt`）を用意し、空の状態ですべて成功することを確認する
-- [ ] 6.3 GitHub Actions の CI（format・lint（oxlint）・typecheck・test・VRT）を追加し、ブランチへの push で全ジョブが緑になることを確認する
+- [x] 6.3 GitHub Actions の CI（format・lint（oxlint）・typecheck・test・VRT）を追加し、ブランチへの push で全ジョブが緑になることを確認する
 
 ## 7. 本実装: 描画（spec: contribution-image）
 
