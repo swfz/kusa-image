@@ -21,7 +21,7 @@ GitHub の草画像を返す公開サービス `swfz/deno-kusa-image`（`kusa-im
 - `/robots.txt` と `/favicon.ico` をユーザー名として扱わず、専用の応答を返す
   - 現状は `robots.txt` がユーザー名として GitHub API を叩いている（566件）
 - アクセスログを D1 に JSON で記録する
-  - 既存の GH Actions → GCS → BigQuery → Dataform のパイプライン（`swfz/deno-logviewer-import-dataform`）に取り込めるようにする
+  - 新しいプライベートリポジトリ `swfz/cloudflare-import-dataform` の GH Actions → GCS → BigQuery（`kusa_image.cf_logs`）→ Dataform で取り込む。旧サービスのログ（`kusa_image.logs`）とは分ける
   - 現行より取れる項目を増やす: 国 / colo / ASN、UA の分類、キャッシュのヒット/ミス、描画時間、PNG のサイズ、GitHub API のレートリミットの残り、エラーの種類
   - IP は保存しない
 - ホストは、既存の Cloudflare ゾーンのサブドメインにする（既存サービスの運用に合わせる）
@@ -69,5 +69,6 @@ GitHub の草画像を返す公開サービス `swfz/deno-kusa-image`（`kusa-im
 - **このリポジトリ（kusa-image）**: Workers のアプリケーション一式を新しく作る。対象は描画、GitHub GraphQL クライアント、キャッシュ、ログ、静的なトップページ、ユニットテスト、VRT
 - **Cloudflare**: Workers（Free）、D1、Cache API、既存ゾーンのサブドメインを使う。GitHub の読み取り用トークンを Secret として登録する
 - **swfz/deno-kusa-image**: Phase 1 のリダイレクトとお知らせ、Phase 2 の案内入り画像を追加する。終了後はアーカイブする
-- **swfz/deno-logviewer-import-dataform**: D1 からエクスポートする matrix のエントリを追加する。新しく取る項目に合わせて Dataform のビューも拡張する
+- **swfz/cloudflare-import-dataform（新規、プライベート）**: D1 のログを `kusa_image.cf_logs` に取り込むワークフローと Dataform のビューを作る
+- **swfz/deno-logviewer-import-dataform**: 変更しない。Deno の終了とともにアーカイブする
 - **既存の埋め込み利用者**: ホスト名の変更が必要。Phase 1〜2 の期間は旧 URL のまま動き、Phase 2 の間は画像に案内が出る

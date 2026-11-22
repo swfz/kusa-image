@@ -67,7 +67,7 @@ GitHub App の検証（App の作成、PAT との取得結果の比較、Worker 
 
 - [x] 11.1 D1 のマイグレーション（`logs`: `id`・`ts`・`value`）と、ログの記録（`ctx.waitUntil`）を実装する。テストで次を確認する: spec の全項目（リクエスト・応答・キャッシュ・描画時間・PNG サイズ・`cost`/残量/リセット時刻・国/colo/ASN/HTTP バージョン）が記録されること、除外ヘッダーが含まれないこと、D1 の書き込みが失敗しても 200 で画像が返ること
 - [x] 11.2 90 日を超えたログを削除する Cron Trigger を実装し、テストで、89 日前のレコードは残り、91 日前のレコードは消えることを確認する
-- [x] 11.3 月単位で JSON Lines（`key`・`value`・`versionstamp`・`ts`）を取り出すエクスポートのスクリプトを実装する。出力を既存の `bq_schema` で `bq load --dry_run` 相当の検証に通し、既存の Dataform ビューの JSON パスで値を取り出せることを確認する
+- [x] 11.3 月単位で JSON Lines（`id`・`ts`・`value`）を取り出すエクスポートのスクリプトを実装する。テストで、各行が `kusa_image.cf_logs` のスキーマ（`id:STRING, ts:TIMESTAMP, value:JSON`）の3列だけを持ち、`value` にレコードの全項目が入ることを確認する
 
 ## 12. 本実装: VRT
 
@@ -78,10 +78,10 @@ GitHub App の検証（App の作成、PAT との取得結果の比較、Worker 
 - [ ] 13.1 `kusa-image.swfz.dev` にデプロイする（D1 の作成とマイグレーション、PAT の Secret、`observability` を有効にする）。本番の URL で次を確認する: 1 年分・ダーク・`past_years=19`・存在しないユーザー・`robots.txt` の応答、2 回目のリクエストでキャッシュが HIT すること、D1 にログが入ること。作成した D1 の ID を `cloudflare.config.ts` に書き、VRT の webServer の起動前に `cf d1 migrations apply <id> --local` を流して、VRT でログの書き込みエラーが出ないことも確認する
 - [ ] 13.2 README（使い方・パラメータ・開発・デプロイ・監視）を書く。監視の手順には、Workers Observability で `exceededCpu` と `rate_limited` を確認する `cf o11y telemetry query` のコマンドを含める。README の手順どおりにコマンドが動くことを確認する
 
-## 14. BigQuery への取り込み（swfz/deno-logviewer-import-dataform）
+## 14. BigQuery への取り込み（swfz/cloudflare-import-dataform、新規・プライベート）
 
-- [ ] 14.1 import ワークフローの matrix に、D1 からのエクスポート（11.3）を使う `kusa-image-cf` のエントリを追加する（出力先は既存の GCS バケットと `kusa_image.logs`、ファイル名の接尾辞で区別する）。`workflow_dispatch` で実行し、新しいレコードが BigQuery に入ることを確認する
-- [ ] 14.2 Dataform のビューに、新しく取るようにした項目（ステータス・エラーの種類・キャッシュ・描画時間・PNG サイズ・`cost`/残量・国/colo/ASN）を追加する。既存の列が変わらないことと、新しい列が新しいレコードで埋まることをクエリで確認する
+- [ ] 14.1 プライベートリポジトリ `swfz/cloudflare-import-dataform` を作り、BigQuery のテーブル `kusa_image.cf_logs`（`id:STRING, ts:TIMESTAMP, value:JSON`）と、GCS・Workload Identity・Secret（Cloudflare の D1 読み取りトークンなど）を用意する。11.3 のエクスポートで D1 → GCS → BigQuery に取り込むワークフローを作り、`workflow_dispatch` で実行して新しいレコードが `kusa_image.cf_logs` に入ることを確認する
+- [ ] 14.2 Dataform のビューを作る（既存の `kusa_image_logs` と同じ列に加え、ステータス・エラーの種類・キャッシュ・描画時間・PNG サイズ・`cost`/残量・国/colo/ASN）。新しいレコードで各列が埋まることをクエリで確認する
 
 ## 15. 旧サービスの移行（swfz/deno-kusa-image）
 
@@ -90,6 +90,6 @@ GitHub App の検証（App の作成、PAT との取得結果の比較、Worker 
 
 ## Workflow follow-up
 
-- Deno Deploy の終了（2027年4月）を確認したら、Phase 3 として `swfz/deno-kusa-image` をアーカイブし、import ワークフローから KV 側のエントリを外す
+- Deno Deploy の終了（2027年4月）を確認したら、Phase 3 として `swfz/deno-kusa-image` と `swfz/deno-logviewer-import-dataform` をアーカイブする
 - 本番で 1102（`exceededCpu`）が実際に出るようになったら、Workers Paid に上げる
 - レビューが済んだら、この change を archive する

@@ -74,7 +74,7 @@ Later secret updates: `pnpm exec cf workers secrets update --worker kusa-image -
 
 ## Logs
 
-Export a month of access logs as JSON Lines for BigQuery ([swfz/deno-logviewer-import-dataform](https://github.com/swfz/deno-logviewer-import-dataform)):
+Export a month of access logs as JSON Lines for BigQuery (`kusa_image.cf_logs`, schema `id:STRING, ts:TIMESTAMP, value:JSON`; the BigQuery import runs in a separate private repository):
 
 ```sh
 CLOUDFLARE_API_TOKEN=... CLOUDFLARE_ACCOUNT_ID=... D1_DATABASE_ID=... pnpm export:logs 2027 1 > 2027-01-cf.jsonl

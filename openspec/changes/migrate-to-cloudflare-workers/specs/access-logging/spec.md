@@ -2,7 +2,7 @@
 
 ## Purpose
 
-利用状況・埋め込み先・エラー・運用上の余裕（キャッシュの効き、描画コスト、GitHub API の残量）を把握するために、リクエストごとのアクセスログを記録し、既存の BigQuery 分析基盤に取り込めるようにする。
+利用状況・埋め込み先・エラー・運用上の余裕（キャッシュの効き、描画コスト、GitHub API の残量）を把握するために、リクエストごとのアクセスログを記録し、BigQuery の分析基盤に取り込めるようにする。
 
 ## ADDED Requirements
 
@@ -88,16 +88,19 @@
 - **THEN** そのレコードが含まれている
 
 ### Requirement: BigQuery 取り込み用のエクスポート
-システムは、指定した年月のログレコードを JSON Lines 形式で取り出せなければならない（SHALL）。各行は、既存の BigQuery テーブル `kusa_image.logs` のスキーマ（`key:JSON, value:JSON, versionstamp:STRING, ts:TIMESTAMP`）に合わせる。
-- `key` にはレコードを一意に識別する値を入れる
+システムは、指定した年月のログレコードを JSON Lines 形式で取り出せなければならない（SHALL）。各行は、新しい BigQuery テーブル `kusa_image.cf_logs` のスキーマ（`id:STRING, ts:TIMESTAMP, value:JSON`）に合わせる。旧サービスのログ（`kusa_image.logs`）とは別のテーブルに入れ、同じテーブルに混ぜてはならない（MUST NOT）。
+- `id` にはレコードを一意に識別する値を入れる
+- `ts` にはタイムスタンプ（ISO 8601、UTC）を入れる
 - `value` にはレコードの全項目を入れる
-- `ts` にはタイムスタンプを入れる
-- `versionstamp` は null でよい
 
 #### Scenario: 月単位で取り出す
 - **WHEN** 2027年1月分のログを取り出す
 - **THEN** 2027年1月のレコードだけを、1行1レコードの JSON Lines で得られる
 
-#### Scenario: 既存のビューと互換
-- **WHEN** 取り出したデータを既存のテーブルに読み込む
-- **THEN** 既存の Dataform のビュー（`value.method`、`value.url`、`value.headers.referer`、`value.headers.user-agent`、`value.user`、`value.theme` の抽出）が変更なしで動く
+#### Scenario: 新しいテーブルのスキーマに合う
+- **WHEN** 取り出したデータを `kusa_image.cf_logs` に読み込む
+- **THEN** 各行が `id`・`ts`・`value` の3列に読み込まれ、`value` からレコードの全項目（`value.method`、`value.headers.user-agent`、`value.cache` など）を取り出せる
+
+#### Scenario: 旧サービスのログと混ざらない
+- **WHEN** Phase 1 の期間に、旧 URL へのリクエストが 301 で新 URL に転送される
+- **THEN** 旧サービスのログは `kusa_image.logs` に、新サービスのログは `kusa_image.cf_logs` にだけ入り、同じテーブルで二重に数えられることはない

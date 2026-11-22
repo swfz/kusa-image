@@ -76,8 +76,19 @@
 - 代替案:
   - Analytics Engine: スキーマを平らにする必要があり、Dataform も直す必要がある
   - BigQuery へ直接書き込む: JWT 署名の CPU コストがかかる
-- 採用理由: 既存の `key/value(JSON)/ts` の形をそのまま再現でき、BigQuery への取り込みは既存のワークフローに matrix のエントリを1つ足すだけで済む
+- 採用理由: `id/ts/value(JSON)` の形で、項目を増やしても D1 と BigQuery のスキーマを変えずに済む
 - 書き込みは `ctx.waitUntil` で応答の後に回す。90 日を超えたレコードは定期的に削除する（Cron Trigger）
+
+**BigQuery への取り込みは、旧サービスと分ける**（swfz の判断）
+- 新しいプライベートリポジトリ `swfz/cloudflare-import-dataform` で、D1 → GCS → BigQuery（`kusa_image.cf_logs`、`id:STRING, ts:TIMESTAMP, value:JSON`）→ Dataform に流す
+- 旧サービスのログ（Deno KV → `swfz/deno-logviewer-import-dataform` → `kusa_image.logs`）は、Deno の終了までそのまま動かす
+- 理由:
+  - Phase 1 の間は、旧 URL へのリクエストが旧サービスの 301 と新サービスの応答の両方で記録される。テーブルを分けておけば、二重に数えることを気にせずに済む
+  - KV のキーを真似た `key` と、常に null の `versionstamp` を持たずに済む
+  - リポジトリ名の慣例（`<データの出どころ>-import-dataform`）に合う。terminal-image と obsidian-opener を Cloudflare に移したときも同じリポジトリに足せる
+- 代替案: 既存のワークフローに matrix のエントリを足し、`kusa_image.logs` に混ぜる。作業は少ないが、上の二重計上とリポジトリ名の問題が残るので採らなかった
+- 新旧を通して見たいときは、Dataform で2つのテーブルを UNION する
+- 旧リポジトリは、Deno の終了とともにアーカイブする（リネームはしない）
 
 **GitHub の認証は個人の PAT（今と同じ）**（swfz の判断）
 - 今回の移行では GitHub App を作らない。旧サービスと同じく、個人の PAT を Secret として持たせる
@@ -100,7 +111,7 @@
 ## Migration Plan
 
 1. 本実装を進め、`kusa-image.swfz.dev` で公開する（Phase 0、2027-01 中）
-2. BigQuery への取り込みに D1 からのエクスポートを追加する
+2. `swfz/cloudflare-import-dataform` を作り、D1 のログを `kusa_image.cf_logs` に取り込む
 3. 旧リポジトリに 301 のリダイレクトとお知らせをデプロイする（Phase 1）
 4. 旧リポジトリに案内入り画像をデプロイする（Phase 2、2027-02-01 から）
 5. Deno Deploy の終了とともに、旧リポジトリと KV 側の取り込みを止めてアーカイブする（Phase 3）
