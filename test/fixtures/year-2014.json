@@ -1,0 +1,883 @@
+{
+  "data": {
+    "user": {
+      "contributionsCollection": {
+        "contributionCalendar": {
+          "totalContributions": 112,
+          "colors": ["#9be9a8", "#40c463", "#30a14e", "#216e39"],
+          "isHalloween": false,
+          "weeks": [
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-01" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-02" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-03" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-04" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-05" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-01-06"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-07" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-08" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-01-09"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-10" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-11" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-12" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-13" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-14" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-15" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-16" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-17" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-18" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-19" },
+                {
+                  "color": "#30a14e",
+                  "contributionCount": 4,
+                  "contributionLevel": "THIRD_QUARTILE",
+                  "date": "2014-01-20"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-21" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-01-22"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-23" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-24" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-25" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-26" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-27" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-28" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-01-29"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-01-30"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-01-31" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-01" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-02" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-03" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-04" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-05" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-06" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-07" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-08" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-09" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-10" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-11" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-12" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-13" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-14" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-15" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-16" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-17" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-18" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-19" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-20" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-21" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-22" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-23" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-24" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-25" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-26" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-27" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-02-28" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-01" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-02" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-03" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-04" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-05" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-06" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-07" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-08" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-09" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-10" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-11" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-12" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-13" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-14" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-15" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-16" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-17" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-18" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-19" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-20" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-21" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-22" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-23" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-24" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-25" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-26" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-27" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-28" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-29" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-30" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-03-31" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-01" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-02" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-03" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-04" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-05" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-06" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-07" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-08" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-09" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-10" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-11" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-12" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-13" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-14" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-15" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-16" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-17" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-18" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-19" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-20" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-21" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-22" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-23" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-24" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-25" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-26" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-27" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-28" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-29" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-04-30" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-01" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-05-02"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-03" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-04" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-05" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-06" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-07" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-08" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-09" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-10" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-11" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-12" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-13" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-14" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-15" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-16" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-17" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-18" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-19" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-20" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-21" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-22" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-23" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-24" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-25" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-26" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-27" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-28" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-29" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-30" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-05-31" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-01" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-02" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-03" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-04" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-05" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-06-06"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-06-07"
+                }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-08" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-09" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-06-10"
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-06-11"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-12" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-13" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-14" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-15" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-16" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-17" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-18" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-19" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-20" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-21" }
+              ]
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-06-22"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-06-23"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-24" },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 3,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-06-25"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-26" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-27" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-28" }
+              ]
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#40c463",
+                  "contributionCount": 3,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-06-29"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-06-30" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-07-01" },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-07-02"
+                },
+                {
+                  "color": "#30a14e",
+                  "contributionCount": 4,
+                  "contributionLevel": "THIRD_QUARTILE",
+                  "date": "2014-07-03"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-07-04"
+                },
+                {
+                  "color": "#216e39",
+                  "contributionCount": 5,
+                  "contributionLevel": "FOURTH_QUARTILE",
+                  "date": "2014-07-05"
+                }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-07-06" },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-07-07"
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 3,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-07-08"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-07-09"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-07-10"
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 3,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-07-11"
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-07-12"
+                }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-07-13" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-07-14"
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 3,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-07-15"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-07-16"
+                },
+                {
+                  "color": "#216e39",
+                  "contributionCount": 6,
+                  "contributionLevel": "FOURTH_QUARTILE",
+                  "date": "2014-07-17"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-07-18"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-07-19" }
+              ]
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-07-20"
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 3,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-07-21"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-07-22" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-07-23" },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-07-24"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-07-25" },
+                {
+                  "color": "#216e39",
+                  "contributionCount": 6,
+                  "contributionLevel": "FOURTH_QUARTILE",
+                  "date": "2014-07-26"
+                }
+              ]
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-07-27"
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-07-28"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-07-29" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-07-30" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-07-31" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-01" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-02" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-03" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-04" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-08-05"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-08-06"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-07" },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-08-08"
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 3,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-08-09"
+                }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-10" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-08-11"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-12" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-13" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-14" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-15" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-16" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-17" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-18" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-19" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-20" },
+                {
+                  "color": "#30a14e",
+                  "contributionCount": 4,
+                  "contributionLevel": "THIRD_QUARTILE",
+                  "date": "2014-08-21"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-22" },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-08-23"
+                }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-24" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-25" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-26" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-27" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-28" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-29" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-30" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-08-31" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-01" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-02" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-03" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-04" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-05" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-06" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-07" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-08" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-09" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-10" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-09-11"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-12" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-13" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-14" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-15" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-09-16"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-09-17"
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-09-18"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-09-19"
+                },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-09-20"
+                }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-21" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-22" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-23" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-24" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-25" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-26" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-27" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-28" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-29" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-09-30" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-10-01"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-02" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-03" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-04" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-05" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-06" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-07" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-08" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-09" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-10" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-11" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-12" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-13" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-14" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-15" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-10-16"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-17" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-18" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-19" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-20" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-21" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-22" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-23" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-24" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-25" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-26" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-27" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-28" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-29" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-30" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-10-31" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-01" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-02" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-03" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-04" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-05" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-06" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-07" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-08" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-09" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-11-10"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-11" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-12" },
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-11-13"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-14" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-15" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-16" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-17" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-18" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-19" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-20" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-21" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-22" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-23" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-24" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-25" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-26" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-27" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-28" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-29" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-11-30" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-01" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-02" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-03" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-04" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-05" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-06" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-07" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-08" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-09" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-10" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-11" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-12" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-13" }
+              ]
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#40c463",
+                  "contributionCount": 3,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-12-14"
+                },
+                {
+                  "color": "#30a14e",
+                  "contributionCount": 4,
+                  "contributionLevel": "THIRD_QUARTILE",
+                  "date": "2014-12-15"
+                },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-12-16"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-17" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-18" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-19" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-20" }
+              ]
+            },
+            {
+              "contributionDays": [
+                {
+                  "color": "#9be9a8",
+                  "contributionCount": 1,
+                  "contributionLevel": "FIRST_QUARTILE",
+                  "date": "2014-12-21"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-22" },
+                {
+                  "color": "#40c463",
+                  "contributionCount": 2,
+                  "contributionLevel": "SECOND_QUARTILE",
+                  "date": "2014-12-23"
+                },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-24" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-25" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-26" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-27" }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-28" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-29" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-30" },
+                { "color": "#ebedf0", "contributionCount": 0, "contributionLevel": "NONE", "date": "2014-12-31" }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rateLimit": { "cost": 1, "remaining": 4986, "resetAt": "2026-11-22T03:52:06Z" }
+  }
+}

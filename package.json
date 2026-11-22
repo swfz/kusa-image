@@ -1,0 +1,32 @@
+{
+  "name": "kusa-image",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cf dev",
+    "build": "cf build",
+    "deploy": "cf deploy",
+    "typecheck": "cf workers types && tsc -p tsconfig.json && tsc -p tsconfig.node.json && tsc -p tsconfig.scripts.json",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "oxlint --deny-warnings",
+    "test": "vitest run",
+    "test:vrt": "playwright test --pass-with-no-tests",
+    "build:glyphs": "uv run --no-project --with 'pillow==13.0.0' python -I scripts/build-glyphs.py assets/fonts/NotoMono-Regular.ttf src/render/glyphs.generated.ts",
+    "build:top-page": "node scripts/build-top-page.ts",
+    "export:logs": "node scripts/export-logs.ts"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "2.0.0-beta.v.17",
+    "@cloudflare/vitest-plugin": "1.8.2",
+    "@playwright/test": "1.65.1",
+    "@types/node": "26.6.6",
+    "cf": "1.0.0-beta.32",
+    "oxlint": "1.93.0",
+    "prettier": "3.10.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
+  },
+  "packageManager": "pnpm@12.4.0"
+}
