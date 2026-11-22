@@ -1,0 +1,7 @@
+spike/
+openspec/
+pnpm-lock.yaml
+.cloudflare/
+src/render/glyphs.generated.ts
+vrt/**/*-snapshots/
+src/pages/top-page.generated.ts

@@ -1,0 +1,11 @@
+{
+  "data": { "user": null, "rateLimit": { "cost": 1, "remaining": 4975, "resetAt": "2026-11-22T03:52:06Z" } },
+  "errors": [
+    {
+      "type": "NOT_FOUND",
+      "path": ["user"],
+      "locations": [{ "line": 1, "column": 50 }],
+      "message": "Could not resolve to a User with the login of 'no-such-user-xyz-kusa'."
+    }
+  ]
+}

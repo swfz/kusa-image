@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>Kusa Image</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      .parameter,
+      .url-structure {
+        background-color: #f4f4f4;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+      .example {
+        margin-top: 20px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+      }
+      .image-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .image-container img {
+        width: 48%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kusa Image</h1>
+    <h3>GitHub Contribution Graph Generator</h3>
+
+    <p>
+      This service generates images like GitHub contribution graphs. You can customize the graph using the following
+      parameters.
+    </p>
+
+    <h2>URL Structure</h2>
+    <div class="url-structure">
+      <p>The base URL structure for the service is:</p>
+      <code>https://kusa-image.swfz.dev/{username}?{parameters}</code>
+      <p>Where:</p>
+      <ul>
+        <li><strong>{username}</strong> is the GitHub username (first part of the path) <strong>Required.</strong></li>
+        <li><strong>{parameters}</strong> are additional query parameters</li>
+      </ul>
+      <p>Example: <code>https://kusa-image.swfz.dev/swfz</code></p>
+      <p>The username can also be given as a query parameter: <code>https://kusa-image.swfz.dev/?user=swfz</code></p>
+      <div class="image-container">
+        <img src="{{SAMPLE_DEFAULT}}" alt="contribution graph of the last year" />
+      </div>
+    </div>
+
+    <h2>Parameters</h2>
+
+    <div class="parameter">
+      <h3>to (Query Parameter)</h3>
+      <p>Specifies the last date to display. Default is the current date.</p>
+      <p>Example: <code>https://kusa-image.swfz.dev/swfz?to=2023-12-31</code></p>
+      <div class="image-container">
+        <img src="{{SAMPLE_TO}}" alt="one year prior to 2023-12-31" />
+      </div>
+    </div>
+
+    <div class="parameter">
+      <h3>past_years (Query Parameter)</h3>
+      <p>Specifies the number of years to display.</p>
+      <p>Example: <code>https://kusa-image.swfz.dev/swfz?past_years=3</code></p>
+      <div class="image-container">
+        <img src="{{SAMPLE_PAST_YEARS}}" alt="graph of the past 3 years" />
+      </div>
+    </div>
+
+    <div class="parameter">
+      <h3>theme (Query Parameter)</h3>
+      <p>Selects the color theme for the graph. Options: dark. default is light</p>
+      <p>Example: <code>https://kusa-image.swfz.dev/swfz?theme=dark</code></p>
+      <div class="image-container">
+        <img src="{{SAMPLE_DARK}}" alt="Dark theme contribution graph" />
+      </div>
+    </div>
+
+    <h2>Usage Example</h2>
+
+    <div class="example">
+      <p>Example request:</p>
+      <code>https://kusa-image.swfz.dev/swfz?to=2023-12-31&theme=dark</code>
+
+      <p>Result image:</p>
+      <img src="{{SAMPLE_TO_DARK}}" alt="GitHub Contribution Graph Example" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc", "import", "vitest"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "ignorePatterns": [
+    "spike/**",
+    "openspec/**",
+    ".cloudflare/**",
+    "src/render/glyphs.generated.ts",
+    "src/pages/top-page.generated.ts"
+  ]
+}

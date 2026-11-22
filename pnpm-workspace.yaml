@@ -1,0 +1,6 @@
+# Cooldown: only install versions published at least 7 days ago.
+# pnpm 12 does not read minimum-release-age from the global rc, so it is set per project.
+minimumReleaseAge: 10080
+allowBuilds:
+  esbuild: true
+  workerd: true
