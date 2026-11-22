@@ -28,8 +28,15 @@ test('user does not exist', async ({ page }) => {
   await expect(page.getByText('Could not resolve to a User. no-such-user-xyz')).toBeVisible();
 });
 
+// The top page is HTML drawn with system fonts, whose antialiasing differs between arm64 and x86_64,
+// so it is checked by content rather than by screenshot.
 test('top page', async ({ page }) => {
   await page.goto('/');
   await expect(page.getByRole('heading', { name: 'Kusa Image' })).toBeVisible();
-  await expect(page).toHaveScreenshot({ fullPage: true });
+  await expect(page.getByText('https://kusa-image.swfz.dev/{username}?{parameters}')).toBeVisible();
+  const samples = page.locator('img');
+  await expect(samples).toHaveCount(5);
+  for (const img of await samples.all()) {
+    expect(await img.evaluate((el: HTMLImageElement) => el.complete && el.naturalWidth === 670)).toBe(true);
+  }
 });
