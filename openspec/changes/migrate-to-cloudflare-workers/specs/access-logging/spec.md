@@ -102,5 +102,5 @@
 - **THEN** 各行が `id`・`ts`・`value` の3列に読み込まれ、`value` からレコードの全項目（`value.method`、`value.headers.user-agent`、`value.cache` など）を取り出せる
 
 #### Scenario: 旧サービスのログと混ざらない
-- **WHEN** Phase 1 の期間に、旧 URL へのリクエストが 301 で新 URL に転送される
-- **THEN** 旧サービスのログは `kusa_image.logs` に、新サービスのログは `kusa_image.cf_logs` にだけ入り、同じテーブルで二重に数えられることはない
+- **WHEN** 移行期間に、旧 URL と新 URL の両方にリクエストが来る
+- **THEN** 旧サービスのログは `kusa_image.logs` に、新サービスのログは `kusa_image.cf_logs` にだけ入る

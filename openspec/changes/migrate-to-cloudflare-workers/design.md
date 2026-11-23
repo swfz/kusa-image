@@ -83,7 +83,7 @@
 - 新しいプライベートリポジトリ `swfz/cloudflare-import-dataform` で、D1 → GCS → BigQuery（`kusa_image.cf_logs`、`id:STRING, ts:TIMESTAMP, value:JSON`）→ Dataform に流す
 - 旧サービスのログ（Deno KV → `swfz/deno-logviewer-import-dataform` → `kusa_image.logs`）は、Deno の終了までそのまま動かす
 - 理由:
-  - Phase 1 の間は、旧 URL へのリクエストが旧サービスの 301 と新サービスの応答の両方で記録される。テーブルを分けておけば、二重に数えることを気にせずに済む
+  - 移行期間は、旧 URL と新 URL の両方にリクエストが来る。テーブルを分けておけば、どちらのサービスへのリクエストかを列で見分けずに済む
   - KV のキーを真似た `key` と、常に null の `versionstamp` を持たずに済む
   - リポジトリ名の慣例（`<データの出どころ>-import-dataform`）に合う。terminal-image と obsidian-opener を Cloudflare に移したときも同じリポジトリに足せる
 - 代替案: 既存のワークフローに matrix のエントリを足し、`kusa_image.logs` に混ぜる。作業は少ないが、上の二重計上とリポジトリ名の問題が残るので採らなかった
@@ -112,8 +112,8 @@
 
 1. 本実装を進め、`kusa-image.swfz.dev` で公開する（Phase 0、2027-01 中）
 2. `swfz/cloudflare-import-dataform` を作り、D1 のログを `kusa_image.cf_logs` に取り込む
-3. 旧リポジトリに 301 のリダイレクトとお知らせをデプロイする（Phase 1）
+3. （Phase 1 の 301 リダイレクトは実施しない。理由は proposal.md）
 4. 旧リポジトリに案内入り画像をデプロイする（Phase 2、2027-02-01 から）
 5. Deno Deploy の終了とともに、旧リポジトリと KV 側の取り込みを止めてアーカイブする（Phase 3）
 
-ロールバック: Phase 1 のリダイレクトは、Deno 側に前の版を再デプロイすれば戻せる（Deno が終了するまで）。新サービス側の不具合は、Cloudflare の前の版にロールバックする。
+ロールバック: Phase 2 の案内入り画像は、Deno 側に前の版を再デプロイすれば戻せる（Deno が終了するまで）。新サービス側の不具合は、Cloudflare の前の版にロールバックする。
