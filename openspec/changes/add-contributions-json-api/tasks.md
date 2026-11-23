@@ -17,13 +17,13 @@
 
 ## 4. ドキュメント
 
-- [ ] 4.1 README に JSON API の節を追加する（URL、`to`、応答の例、エラー、キャッシュ、tools が使っていること）。トップページの使い方には載せない。README の例の URL を本番で叩いて、書いた通りの応答が返ることを 5.1 で確認する
+- [x] 4.1 README に JSON API の節を追加する（URL、`to`、応答の例、エラー、キャッシュ、tools が使っていること）。トップページの使い方には載せない。README の例の URL を本番で叩いて、書いた通りの応答が返ることを 5.1 で確認する
 
 ## 5. リリースと tools の切り替え
 
-- [ ] 5.1 kusa-image を本番にデプロイし、`curl` で `/swfz.json`（`max-age` が 3600 以下、最後の日が今日）、`/swfz.json?to=2023-12-31`（最後の日が `2023-12-31`、`max-age` が 604800 以上）、`/no-such-user-xyz.json`（404 の JSON）を確認する。D1 のログに JSON のリクエストが記録されていることも確認する
-- [ ] 5.2 本番の `/swfz.json` と、フォーク（`forked-contributions-api.swfz.deno.net/swfz.json`）の応答を比べ、`totalContributions` と各日の `date`・`contributionCount` が一致することを確認する
-- [ ] 5.3 `swfz/tools` で `CONTRIBUTION_API_URL` のデフォルトを `https://kusa-image.swfz.dev` に変え、e2e のモックの URL を合わせる PR を出す。tools の lint・ユニットテスト・e2e が通ること、Vercel のプレビューの `/kusa/swfz` で今日・昨日・連続日数・カバー率が表示されることを確認する。Vercel の環境変数で `CONTRIBUTION_API_URL` を上書きしていないことも確認する
+- [x] 5.1 kusa-image を本番にデプロイし、`curl` で `/swfz.json`（`max-age` が 3600 以下、最後の日が今日）、`/swfz.json?to=2023-12-31`（最後の日が `2023-12-31`、`max-age` が 604800 以上）、`/no-such-user-xyz.json`（404 の JSON）を確認する。D1 のログに JSON のリクエストが記録されていることも確認する
+- [x] 5.2 本番の `/swfz.json` と、フォーク（`forked-contributions-api.swfz.deno.net/swfz.json`）の応答を比べ、`totalContributions` と各日の `date`・`contributionCount` が一致することを確認する
+- [x] 5.3 `swfz/tools` で `CONTRIBUTION_API_URL` のデフォルトを `https://kusa-image.swfz.dev` に変え、e2e のモックの URL を合わせる PR を出す。tools の lint・ユニットテスト・e2e が通ること、Vercel のプレビューの `/kusa/swfz` で今日・昨日・連続日数・カバー率が表示されることを確認する。Vercel の環境変数で `CONTRIBUTION_API_URL` を上書きしていないことも確認する
 
 ## 後続の作業（進捗の対象外）
 
