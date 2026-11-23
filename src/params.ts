@@ -6,8 +6,13 @@ export type ParsedRequest =
   | { kind: 'top' }
   | { kind: 'robots' }
   | { kind: 'favicon' }
-  | { kind: 'bad_request'; message: string }
-  | { kind: 'image'; user: string; theme: Theme; to?: string; pastYears?: number };
+  | { kind: 'bad_request'; message: string; format: 'text' | 'json' }
+  | { kind: 'image'; user: string; theme: Theme; to?: string; pastYears?: number }
+  | { kind: 'json'; user: string; to?: string };
+
+export type JsonRequest = Extract<ParsedRequest, { kind: 'json' }>;
+
+const JSON_SUFFIX = '.json';
 
 const DATE_PATTERN = /^(\d{4})-(\d{2})-(\d{2})$/;
 
@@ -37,10 +42,25 @@ const firstPathSegment = (url: URL): string | undefined => {
   }
 };
 
+const invalidToMessage = (to: string) => `Invalid "to" parameter: expected YYYY-MM-DD, got ${to}`;
+
+/** /<user>.json: only the path's user and to matter (theme, past_years and ?user= are ignored). */
+const parseJsonRequest = (user: string, url: URL): ParsedRequest => {
+  if (user === '') return { kind: 'bad_request', message: 'Missing user: expected /<user>.json', format: 'json' };
+  // An empty to is treated as not given, like the image.
+  const to = url.searchParams.get('to');
+  if (!to) return { kind: 'json', user };
+  if (!isValidDate(to)) return { kind: 'bad_request', message: invalidToMessage(to), format: 'json' };
+  return { kind: 'json', user, to };
+};
+
 export const parseRequest = (url: URL, now: Date): ParsedRequest => {
   const segment = firstPathSegment(url);
   if (segment === 'robots.txt') return { kind: 'robots' };
   if (segment === 'favicon.ico') return { kind: 'favicon' };
+
+  // GitHub logins cannot contain ".", so a "<user>.json" segment never collides with an image request.
+  if (segment?.endsWith(JSON_SUFFIX)) return parseJsonRequest(segment.slice(0, -JSON_SUFFIX.length), url);
 
   // The path takes precedence over ?user=.
   const user = segment ?? url.searchParams.get('user') ?? '';
@@ -57,8 +77,7 @@ export const parseRequest = (url: URL, now: Date): ParsedRequest => {
   // An empty to is also treated as not given.
   const to = url.searchParams.get('to');
   if (to) {
-    if (!isValidDate(to))
-      return { kind: 'bad_request', message: `Invalid "to" parameter: expected YYYY-MM-DD, got ${to}` };
+    if (!isValidDate(to)) return { kind: 'bad_request', message: invalidToMessage(to), format: 'text' };
     return { kind: 'image', user, theme, to };
   }
 

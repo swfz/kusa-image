@@ -20,6 +20,31 @@ Successor of [swfz/deno-kusa-image](https://github.com/swfz/deno-kusa-image) (De
 
 Responses: `200 image/png`, `400` invalid `to`, `404` unknown user, `502` GitHub error, `503` GitHub rate limit.
 
+## JSON
+
+`/<user>.json` returns the contribution calendar as JSON, in the same shape as [deno-github-contributions-api](https://github.com/kawarimidoll/deno-github-contributions-api)'s `.json` (without each day's `color`). [swfz/tools](https://github.com/swfz/tools) uses it for the daily counts and streak on `/kusa/<user>`.
+
+```
+https://kusa-image.swfz.dev/swfz.json
+https://kusa-image.swfz.dev/swfz.json?to=2023-12-31
+```
+
+```json
+{
+  "contributions": [
+    [
+      { "contributionCount": 0, "contributionLevel": "NONE", "date": "2023-01-01" },
+      { "contributionCount": 3, "contributionLevel": "SECOND_QUARTILE", "date": "2023-01-02" }
+    ]
+  ],
+  "totalContributions": 1234
+}
+```
+
+- `contributions` is a list of weeks, oldest first. `to` (`YYYY-MM-DD`) sets the last day of the one-year range; without it, the range ends today. `theme`, `past_years` and `?user=` are ignored.
+- Errors return `{ "error": "..." }` with the same statuses as images (`400`, `404`, `502`, `503`) and `Cache-Control: no-store`.
+- Cached like images: 1 hour when the range includes today, 7 days for past-only ranges. Responses carry `Access-Control-Allow-Origin: *`.
+
 ## Development
 
 Requires Node.js (see `.node-version`) and pnpm. Dependencies are installed with a 7-day cooldown (`minimumReleaseAge` in `pnpm-workspace.yaml`).
@@ -51,7 +76,7 @@ VRT snapshots are generated on Linux to match CI. Regenerate them with Docker (c
 
 ## How it works
 
-- `src/params.ts` parses the request, `src/github.ts` calls the GitHub GraphQL API, `src/render/` draws the image.
+- `src/params.ts` parses the request, `src/github.ts` calls the GitHub GraphQL API, `src/render/` draws the image. `src/contributions-json.ts` shapes the `/<user>.json` response.
 - Rendering writes palette indices directly and encodes an indexed PNG with `CompressionStream`; text uses pre-rasterized Noto Mono 10px masks. This keeps a one-year image at a few ms of CPU on the Workers Free plan.
 - `src/cache.ts`: images are cached with the Cache API (1 hour when the range includes today, 7 days for past-only ranges). Calendars of past years are cached per year, so a multi-year image only refetches the current year.
 - `src/log.ts`: one access log row per request in D1 (no IP addresses or credentials). A daily Cron Trigger deletes rows older than 90 days.

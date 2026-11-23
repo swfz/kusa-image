@@ -1,4 +1,5 @@
 import type { ImageRequest } from './image.ts';
+import type { JsonRequest } from './params.ts';
 import type { ContributionCalendar } from './types.ts';
 
 // Cache API keys live on a private origin so they can never collide with real URLs.
@@ -20,9 +21,19 @@ export const imageCacheKey = (request: ImageRequest): string => {
 
 const today = (now: Date): string => now.toISOString().slice(0, 10);
 
-/** SHORT_TTL when the image may include today, LONG_TTL when it only covers the past. */
+/** LONG_TTL when a range ending on `to` is entirely in the past, SHORT_TTL when it may include today. */
+export const rangeTtl = (to: string | undefined, now: Date): number => (to && to < today(now) ? LONG_TTL : SHORT_TTL);
+
+/** past_years always includes the current year. */
 export const imageTtl = (request: ImageRequest, now: Date): number =>
-  !request.pastYears && request.to && request.to < today(now) ? LONG_TTL : SHORT_TTL;
+  request.pastYears ? SHORT_TTL : rangeTtl(request.to, now);
+
+/** Same key for the same user (case-insensitive) and to; separate from images. */
+export const jsonCacheKey = (request: JsonRequest): string => {
+  const params = new URLSearchParams({ user: request.user.toLowerCase() });
+  if (request.to) params.set('to', request.to);
+  return `${KEY_ORIGIN}/${VERSION}/json?${params}`;
+};
 
 export const calendarCacheKey = (user: string, year: number): string =>
   `${KEY_ORIGIN}/${VERSION}/calendar?${new URLSearchParams({ user: user.toLowerCase(), year: String(year) })}`;
