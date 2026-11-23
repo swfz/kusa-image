@@ -31,6 +31,48 @@ describe('parseRequest: reserved paths', () => {
   });
 });
 
+describe('parseRequest: json', () => {
+  it('reads the user from /<user>.json', () => {
+    expect(parse('/swfz.json')).toEqual({ kind: 'json', user: 'swfz' });
+  });
+
+  it('keeps the case of the user (the cache key and GitHub ignore it)', () => {
+    expect(parse('/SWFZ.json')).toEqual({ kind: 'json', user: 'SWFZ' });
+  });
+
+  it('accepts to=YYYY-MM-DD', () => {
+    expect(parse('/swfz.json?to=2023-12-31')).toEqual({ kind: 'json', user: 'swfz', to: '2023-12-31' });
+  });
+
+  it('treats an empty to as not given', () => {
+    expect(parse('/swfz.json?to=')).toEqual({ kind: 'json', user: 'swfz' });
+  });
+
+  it.each(['2023-13-45', '2023-02-30', 'yesterday'])('rejects to=%s as a JSON bad request', (value) => {
+    expect(parse(`/swfz.json?to=${value}`)).toMatchObject({ kind: 'bad_request', format: 'json' });
+  });
+
+  it('rejects an empty user as a JSON bad request', () => {
+    expect(parse('/.json')).toMatchObject({ kind: 'bad_request', format: 'json' });
+  });
+
+  it.each(['past_years=3', 'theme=dark', 'user=octocat'])('ignores %s', (query) => {
+    expect(parse(`/swfz.json?${query}`)).toEqual({ kind: 'json', user: 'swfz' });
+  });
+
+  it('keeps paths without .json as images', () => {
+    expect(parse('/swfz')).toMatchObject({ kind: 'image' });
+  });
+
+  it('only accepts a lowercase .json', () => {
+    expect(parse('/swfz.JSON')).toMatchObject({ kind: 'image', user: 'swfz.JSON' });
+  });
+
+  it('marks a bad image request as text', () => {
+    expect(parse('/swfz?to=bad')).toMatchObject({ kind: 'bad_request', format: 'text' });
+  });
+});
+
 describe('parseRequest: theme', () => {
   it.each([
     ['dark', 'dark'],

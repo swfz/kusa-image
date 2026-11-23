@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { imageCacheKey, imageTtl, LONG_TTL, SHORT_TTL } from '../src/cache.ts';
+import { imageCacheKey, imageTtl, jsonCacheKey, LONG_TTL, rangeTtl, SHORT_TTL } from '../src/cache.ts';
 import { type Context, handle } from '../src/index.ts';
 import { testEnv } from './env.ts';
 import { parseRequest } from '../src/params.ts';
@@ -51,6 +51,45 @@ describe('imageTtl', () => {
   it('keeps images including today within an hour and past-only images for at least 7 days', () => {
     expect(SHORT_TTL).toBeLessThanOrEqual(60 * 60);
     expect(LONG_TTL).toBeGreaterThanOrEqual(60 * 60 * 24 * 7);
+  });
+});
+
+const jsonRequest = (path: string) => {
+  const parsed = parseRequest(new URL(path, 'https://kusa-image.swfz.dev'), NOW);
+  if (parsed.kind !== 'json') throw new Error(`not a json request: ${path}`);
+  return parsed;
+};
+
+describe('jsonCacheKey', () => {
+  it('ignores the case of the user and image parameters', () => {
+    expect(jsonCacheKey(jsonRequest('/swfz.json?to=2023-12-31'))).toBe(
+      jsonCacheKey(jsonRequest('/SWFZ.json?theme=dark&to=2023-12-31&past_years=3')),
+    );
+  });
+
+  it('separates users and to', () => {
+    const keys = ['/swfz.json', '/octocat.json', '/swfz.json?to=2023-12-31', '/swfz.json?to=2023-12-30'].map((p) =>
+      jsonCacheKey(jsonRequest(p)),
+    );
+    expect(new Set(keys).size).toBe(keys.length);
+  });
+
+  it('never collides with image keys', () => {
+    const json = ['/swfz.json', '/swfz.json?to=2023-12-31'].map((p) => jsonCacheKey(jsonRequest(p)));
+    const images = ['/swfz', '/swfz?to=2023-12-31'].map((p) => imageCacheKey(imageRequest(p)));
+    expect(json.filter((k) => images.includes(k))).toEqual([]);
+  });
+});
+
+describe('rangeTtl', () => {
+  it.each([
+    [undefined, SHORT_TTL],
+    ['2026-11-22', SHORT_TTL], // today
+    ['2027-01-01', SHORT_TTL], // future
+    ['2026-11-21', LONG_TTL], // yesterday
+    ['2023-12-31', LONG_TTL],
+  ])('to=%s -> %i', (to, ttl) => {
+    expect(rangeTtl(to, NOW)).toBe(ttl);
   });
 });
 
