@@ -27,8 +27,8 @@ GitHub の草画像を返す公開サービス `swfz/deno-kusa-image`（`kusa-im
 - ホストは、既存の Cloudflare ゾーンのサブドメインにする（既存サービスの運用に合わせる）
 - 段階的に移行する（旧サービス `swfz/deno-kusa-image` 側も作業する）
   - Phase 0: 新サービスを公開する（目標 2027-01 中）
-  - Phase 1: 旧サービスを新ドメインへの 301 リダイレクトに切り替える。トップページと README に移転のお知らせを出す
-  - Phase 2: 終了の約2か月前から、旧サービスは画像の凡例行の左側に移転先を書いた「案内入り画像」を返す（画像サイズは変えない）
+  - Phase 1: （実施しない）旧サービスを新ドメインへの 301 リダイレクトに切り替える案だった。リダイレクトだけだと、埋め込んでいる人は移転に気づかないまま使い続け、Deno の終了とともに画像が出なくなる。そのため、画像そのものに移転先を描く Phase 2 だけで知らせる
+  - Phase 2: 終了の約2か月前から、旧サービスは画像の凡例行の左側に移転先と、旧 URL がいずれ使えなくなること（`Moved to kusa-image.swfz.dev. kusa-image.swfz.deno.net will stop working soon`）を書いた「案内入り画像」を返す。見落とされないよう、テーマによらず赤地に白の太字で描く（画像サイズは変えない）
   - Phase 3: Deno Deploy の終了とともに旧 URL は使えなくなる
 - **BREAKING**: ホスト名が `kusa-image.swfz.deno.net` から新しいサブドメインに変わる（パスとパラメータは互換）
 
@@ -68,7 +68,7 @@ GitHub の草画像を返す公開サービス `swfz/deno-kusa-image`（`kusa-im
 
 - **このリポジトリ（kusa-image）**: Workers のアプリケーション一式を新しく作る。対象は描画、GitHub GraphQL クライアント、キャッシュ、ログ、静的なトップページ、ユニットテスト、VRT
 - **Cloudflare**: Workers（Free）、D1、Cache API、既存ゾーンのサブドメインを使う。GitHub の読み取り用トークンを Secret として登録する
-- **swfz/deno-kusa-image**: Phase 1 のリダイレクトとお知らせ、Phase 2 の案内入り画像を追加する。終了後はアーカイブする
+- **swfz/deno-kusa-image**: Phase 2 の案内入り画像を追加する。終了後はアーカイブする
 - **swfz/cloudflare-import-dataform（新規、プライベート）**: D1 のログを `kusa_image.cf_logs` に取り込むワークフローと Dataform のビューを作る
 - **swfz/deno-logviewer-import-dataform**: 変更しない。Deno の終了とともにアーカイブする
-- **既存の埋め込み利用者**: ホスト名の変更が必要。Phase 1〜2 の期間は旧 URL のまま動き、Phase 2 の間は画像に案内が出る
+- **既存の埋め込み利用者**: ホスト名の変更が必要。Deno Deploy の終了までは旧 URL のまま動き、Phase 2 の間は画像に案内が出る
