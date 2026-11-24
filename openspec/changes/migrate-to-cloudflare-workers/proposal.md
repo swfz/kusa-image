@@ -28,7 +28,7 @@ GitHub の草画像を返す公開サービス `swfz/deno-kusa-image`（`kusa-im
 - 段階的に移行する（旧サービス `swfz/deno-kusa-image` 側も作業する）
   - Phase 0: 新サービスを公開する（目標 2027-01 中）
   - Phase 1: （実施しない）旧サービスを新ドメインへの 301 リダイレクトに切り替える案だった。リダイレクトだけだと、埋め込んでいる人は移転に気づかないまま使い続け、Deno の終了とともに画像が出なくなる。そのため、画像そのものに移転先を描く Phase 2 だけで知らせる
-  - Phase 2: 終了の約2か月前から、旧サービスは画像の凡例行の左側に旧ホストと新ホスト（`kusa-image.swfz.deno.net -> kusa-image.swfz.dev`）を書いた「案内入り画像」を返す。見落とされないよう、テーマによらず赤地に白の太字で描く（画像サイズは変えない）
+  - Phase 2: 終了の約2か月前から、旧サービスは画像の凡例行の左側に移転先と、旧 URL がいずれ使えなくなること（`Moved to kusa-image.swfz.dev. kusa-image.swfz.deno.net will stop working soon`）を書いた「案内入り画像」を返す。見落とされないよう、テーマによらず赤地に白の太字で描く（画像サイズは変えない）
   - Phase 3: Deno Deploy の終了とともに旧 URL は使えなくなる
 - **BREAKING**: ホスト名が `kusa-image.swfz.deno.net` から新しいサブドメインに変わる（パスとパラメータは互換）
 
