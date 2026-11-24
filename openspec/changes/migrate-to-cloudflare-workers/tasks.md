@@ -86,7 +86,7 @@ GitHub App の検証（App の作成、PAT との取得結果の比較、Worker 
 ## 15. 旧サービスの移行（swfz/deno-kusa-image）
 
 - 15.1 Phase 1（301 リダイレクト）は実施しないことにした（2026-11-23）。理由は proposal.md の Phase 1 を参照
-- [ ] 15.2 Phase 2: 凡例の行の左側に、移転先と、旧 URL がいずれ使えなくなること（`Moved to kusa-image.swfz.dev. kusa-image.swfz.deno.net will stop working soon`）を赤地に白の太字で描いた案内入り画像を返す版を用意する。VRT で、画像サイズが変わらず案内が描かれていることを確認する。2027-02-01 にデプロイする
+- [x] 15.2 Phase 2: 凡例の行の左側に、移転先と、旧 URL がいずれ使えなくなること（`Moved to kusa-image.swfz.dev. kusa-image.swfz.deno.net will stop working soon`）を赤地に白の太字で描いた案内入り画像を返す版を用意する。VRT で、画像サイズが変わらず案内が描かれていることを確認する。2027-02-01 にデプロイする（前倒しして 2026-11-24 にデプロイした。swfz/deno-kusa-image#163）
 
 ## Workflow follow-up
 
